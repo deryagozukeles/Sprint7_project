@@ -83,7 +83,7 @@ const handleSubmit=(event)=>{
                 value={form.email}
                 onChange={handleChange}
                 invalid={errors.email}
-                 />
+                data-testid="email-error"/>
                  {errors.email && <FormFeedback>{errorMessages.email}</FormFeedback>}
             </FormGroup>
             <FormGroup>
@@ -96,7 +96,7 @@ const handleSubmit=(event)=>{
                 value={form.password}
                 onChange={handleChange}
                 invalid={errors.password}
-                 />
+                 data-testid="password-error"/>
                  {errors.password && <FormFeedback>{errorMessages.password}</FormFeedback>}
             </FormGroup>
             <FormGroup check>
@@ -110,7 +110,7 @@ const handleSubmit=(event)=>{
                 <Label for="terms">I agree to terms of service and privacy policy</Label>
             </FormGroup>
             <FormGroup className="text-center p-4">
-                <Button disabled={!isValid} color="primary">Sign In</Button>
+                <Button disabled={!isValid} color="primary" type="submit">Sign In</Button>
             </FormGroup>
             
         </Form>
